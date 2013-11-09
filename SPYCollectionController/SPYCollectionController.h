@@ -14,8 +14,8 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 /**
  *	A convenience initializer for SPYCollectionDataSource when the collection items are not yet known
  *
- *	@param	cellIdentifier	The cellIdentifier that the collectionView or tableView cell was registered with.  This can be nil but will assert if nil and used as a datasource
- *	@param	configurationBlock	The configurationBlock used to configure your table or collection view cells.  This can be nil but will assert if nil and used as a datasource
+ *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource
+ *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
  *	@return	An instance of SPYCollectionDataSource
@@ -36,8 +36,8 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	A convenience initializer for SPYCollectionDataSource when the collection items are already known
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
- *	@param	cellIdentifier	The cellIdentifier that the collectionView or tableView cell was registered with.  This can be nil but will assert if nil and used as a datasource
- *	@param	configurationBlock	The configurationBlock used to configure your table or collection view cells.  This can be nil but will assert if nil and used as a datasource
+ *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource
+ *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
  *	@return	An instance of SPYCollectionDataSource
@@ -47,8 +47,8 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 /**
  *	An initializer for SPYCollectionDataSource when the collection items are not yet known
  *
- *	@param	cellIdentifier	The cellIdentifier that the collectionView or tableView cell was registered with.  This can be nil but will assert if nil and used as a datasource.
- *	@param	configurationBlock	The configurationBlock used to configure your table or collection view cells.  This can be nil but will assert if nil and used as a datasource.
+ *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource.
+ *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
  *	@return	An instance of SPYCollectionDataSource
@@ -69,8 +69,8 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	An initializer for SPYCollectionDataSource when the collection items are already known
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
- *	@param	cellIdentifier	The cellIdentifier that the collectionView or tableView cell was registered with.  This can be nil but will assert if nil and used as a datasource
- *	@param	configurationBlock	The configurationBlock used to configure your table or collection view cells.  This can be nil but will assert if nil and used as a datasource
+ *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource
+ *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
  *	@return	An instance of SPYCollectionDataSource
