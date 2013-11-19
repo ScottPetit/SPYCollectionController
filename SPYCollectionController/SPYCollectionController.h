@@ -18,7 +18,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 + (instancetype)controllerWithIdentifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
@@ -28,7 +28,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 + (instancetype)controllerWithItems:(NSArray *)items selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
@@ -40,7 +40,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 + (instancetype)controllerWithItems:(NSArray *)items identifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
@@ -51,7 +51,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 - (instancetype)initWithIdentifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
@@ -61,7 +61,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 - (instancetype)initWithItems:(NSArray *)items selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
@@ -73,7 +73,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
  *
- *	@return	An instance of SPYCollectionDataSource
+ *	@return	An instance of SPYCollectionController
  */
 - (instancetype)initWithItems:(NSArray *)items identifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
