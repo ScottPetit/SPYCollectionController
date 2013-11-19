@@ -26,14 +26,6 @@ static NSString * const cellIdentifier = @"cellIdentifier";
 {
     [super viewDidLoad];
     
-    NSArray *items = @[[UIColor redColor], [UIColor greenColor], [UIColor grayColor]];
-    
-    self.collectionController = [SPYCollectionController controllerWithItems:items identifier:cellIdentifier configurationBlock:^(id cell, UIColor *item) {
-        [cell setBackgroundColor:item];
-    } selectionBlock:^(id cell, id item) {
-        [self.collectionView setBackgroundColor:item];
-    }];
-    
     [self showCollectionView];
 }
 
@@ -43,6 +35,14 @@ static NSString * const cellIdentifier = @"cellIdentifier";
     self.collectionView.backgroundColor = [UIColor yellowColor];
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
+    
+    NSArray *items = @[[UIColor redColor], [UIColor greenColor], [UIColor grayColor]];
+    
+    self.collectionController = [SPYCollectionController controllerWithItems:items identifier:cellIdentifier configurationBlock:^(id cell, UIColor *item) {
+        [cell setBackgroundColor:item];
+    } selectionBlock:^(id cell, id item) {
+        [self.collectionView setBackgroundColor:item];
+    }];
     
     self.collectionView.dataSource = self.collectionController;
     self.collectionView.delegate = self.collectionController;
