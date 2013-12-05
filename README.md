@@ -2,6 +2,9 @@
 
 SPYCollectionController is a simple control to remove some of the boiler plate when setting up a UICollectionView.  SPYCollectionController is by no means built for every use case, but instead for the most basic of cases where you only want to show a single section collection view and get selection events.  
 
+<br/>
+[![Build Status](https://travis-ci.org/scottpetit/SPYCollectionController.png?branch=master)](https://travis-ci.org/scottpetit/SPYCollectionController)
+
 ##Initializing
 
 SPYCollectionController has a few different init methods but the most encompassing is: 
