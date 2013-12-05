@@ -3,5 +3,5 @@ language: objective-c
 before_install: gem install cocoapods
 
 script:
-    -  xcodebuild -workspace SPYCollectionController.xcworkspace -scheme SPYCollectionController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-    -  xcodebuild test -workspace SPYCollectionController.xcworkspace -scheme SPYCollectionController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    -  xctool -workspace SPYCollectionController.xcworkspace -scheme SPYCollectionController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+    -  xctool test -workspace SPYCollectionController.xcworkspace -scheme SPYCollectionController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
