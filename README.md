@@ -1,11 +1,13 @@
 #SPYCollectionController
 
-SPYCollectionController is a simple control to remove some of the boiler plate when setting up a UICollectionView.  SPYCollectionController is by no means built for every use case, but instead for the most basic of cases where you only want to show a single section collection view and get selection events.  
+SPYCollectionController is a simple control to remove some of the boiler plate when setting up a UICollectionView.  SPYCollectionController is by no means built for every use case, but instead for the most basic of cases where you only want to show a single section collection view and get selection events.
+
+The header is also pretty extensively documented (and simple) so feel free to take a look at there if you have any questions.  
 
 <br/>
 [![Build Status](https://travis-ci.org/ScottPetit/SPYCollectionController.png?branch=master)](https://travis-ci.org/ScottPetit/SPYCollectionController)
 
-##Initializing
+##Initializing and Usage
 
 SPYCollectionController has a few different init methods but the most encompassing is: 
 
@@ -16,7 +18,7 @@ controllerWithItems:(NSArray *)items identifier:(NSString *)cellIdentifier confi
 The cellIdentifier should be the string value that you passed when registering the NIB or Cell with the collection view.  The configuration block gives you a chance to provide any context specific data to the cell.  In the example it is used as such 
 
 ```objective-c
-^(id cell, UIColor *item) {
+configurationBlock:^(id cell, UIColor *item) {
         [cell setBackgroundColor:item];
     }
 ```
@@ -29,7 +31,7 @@ collectionView: didSelectItemAtIndexPath:
 and in the example app is used like
 
 ```objective-c
-^(id cell, id item) {
+selectionBlock:^(id cell, id item) {
         [self.collectionView setBackgroundColor:item];
     }];
 ```
