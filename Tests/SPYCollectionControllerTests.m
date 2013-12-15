@@ -133,11 +133,9 @@ describe(@"SPYCollectionController", ^{
             
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
             UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
-            [[_mockCollectionView shouldNot] receive:@selector(dequeueReusableCellWithReuseIdentifier:forIndexPath:) andReturn:cell withArguments:cellIdentifier, indexPath];
+            [[_mockCollectionView should] receive:@selector(dequeueReusableCellWithReuseIdentifier:forIndexPath:) andReturn:cell withArguments:cellIdentifier, indexPath];
             
-            [[theBlock(^{
-                [collectionController collectionView:_mockCollectionView cellForItemAtIndexPath:indexPath];
-            }) should] raise];
+            [collectionController collectionView:_mockCollectionView cellForItemAtIndexPath:indexPath];
         });
     });
     

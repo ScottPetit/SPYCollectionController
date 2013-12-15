@@ -12,7 +12,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 @interface SPYCollectionController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
 
 /**
- *	A convenience initializer for SPYCollectionDataSource when the collection items are not yet known
+ *	A convenience initializer for SPYCollectionController when the collection items are not yet known
  *
  *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource
@@ -23,7 +23,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 + (instancetype)controllerWithIdentifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
 /**
- *	A convenience initializer for SPYCollectionDataSource when the collection items are already known and you only want to use the delegate callbacks, and handle the datasource yourself.
+ *	A convenience initializer for SPYCollectionController when the collection items are already known and you only want to use the delegate callbacks, and handle the datasource yourself.
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
@@ -33,7 +33,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 + (instancetype)controllerWithItems:(NSArray *)items selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
 /**
- *	A convenience initializer for SPYCollectionDataSource when the collection items are already known
+ *	A convenience initializer for SPYCollectionController when the collection items are already known
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource
@@ -45,7 +45,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 + (instancetype)controllerWithItems:(NSArray *)items identifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
 /**
- *	An initializer for SPYCollectionDataSource when the collection items are not yet known
+ *	An initializer for SPYCollectionController when the collection items are not yet known
  *
  *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource.
  *	@param	configurationBlock	The configurationBlock used to configure your collection view cells.  This can be nil but will assert if nil and used as a datasource.
@@ -56,7 +56,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 - (instancetype)initWithIdentifier:(NSString *)cellIdentifier configurationBlock:(SPYCollectionCellConfigurationBlock)configurationBlock selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
 /**
- *	A convenience initializer for SPYCollectionDataSource when the collection items are already known and you only want to use the delegate callbacks, and handle the datasource yourself.
+ *	A convenience initializer for SPYCollectionController when the collection items are already known and you only want to use the delegate callbacks, and handle the datasource yourself.
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *  @param selectionBlock  The selectionBlock to be called on collectionView:didSelectItemAtIndexPath:.  This can be nil but can only be set in the initializer.
@@ -66,7 +66,7 @@ typedef void (^SPYCollectionCellSelectionBlock)(id cell, id item);
 - (instancetype)initWithItems:(NSArray *)items selectionBlock:(SPYCollectionCellSelectionBlock)selectionBlock;
 
 /**
- *	An initializer for SPYCollectionDataSource when the collection items are already known
+ *	An initializer for SPYCollectionController when the collection items are already known
  *
  *	@param	items	The array of items powering the data source.  This can be nil but you'd need to call 'setItems:' at some point in the future.
  *	@param	cellIdentifier	The cellIdentifier that the collectionView cell was registered with.  This can be nil but will assert if nil and used as a datasource

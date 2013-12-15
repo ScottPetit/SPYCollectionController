@@ -66,13 +66,18 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.configurationBlock || !self.cellIdentifier)
+    if (!self.cellIdentifier)
     {
-        NSAssert(NO, @"Trying to return a cell for item at index path with a nil configuration block (%@) or cell identifier (%@) is just crazy talk.", self.configurationBlock, self.cellIdentifier);
-        return nil;
+        NSAssert(NO, @"A cellIdentifier is a required property to dequeue collection view cells.");
     }
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentifier forIndexPath:indexPath];
+    
+    if (!self.configurationBlock)
+    {
+        NSLog(@"No configuration block set so we're just returning the dequeud cell.  Please make sure you set a configuration block if you want SPYCollectionController to act as the data source for your collection view");
+        return cell;
+    }
     
     id item = self.items[indexPath.item];
     self.configurationBlock(cell, item);
@@ -94,6 +99,5 @@
     
     self.selectionBlock(cell, item);
 }
-
 
 @end
